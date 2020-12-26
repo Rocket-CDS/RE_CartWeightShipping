@@ -27,15 +27,6 @@
       </dependencies>
             
       <components>
-        <component type="Script">
-          <scripts>
-            <basePath>DesktopModules\DNNrocketModules\RE_CartWeightShipping\Installation</basePath>
-            <script type="Install">
-            </script>
-            <script type="UnInstall">
-            </script>
-          </scripts>
-        </component>
         
         <component type="ResourceFile">
 					<resourceFiles>
@@ -59,7 +50,7 @@
 
         <component type="File">
           <files>
-            <basePath>DesktopModules\DNNrocketModules\RE_CartWeightShipping\Installation</basePath>
+            <basePath>DesktopModules\DNNrocket\API\Systems\</basePath>
             <file>
               <name>rocketecommerce_system.xml</name>
             </file>
