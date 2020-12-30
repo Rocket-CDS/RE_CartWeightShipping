@@ -1,5 +1,5 @@
 <item>
-  <typecode>SYSTEM</typecode>
+  <typecode>INTERFACE</typecode>
   <guidkey>rocketecommerce</guidkey>
   <genxml>
     <interfacedata list="true">

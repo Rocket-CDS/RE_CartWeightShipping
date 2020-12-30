@@ -52,7 +52,7 @@
           <files>
             <basePath>DesktopModules\DNNrocket\API\Systems\</basePath>
             <file>
-              <name>rocketecommerce_system.xml</name>
+              <name>RE_CartWeightShipping_system.xml</name>
             </file>
           </files>
         </component>
