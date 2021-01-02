@@ -21,7 +21,7 @@
   <file include='true'>
 		<!-- All paths should be from the source root (project root) -->
     <!-- These files will be NOT in the Resource.zip, they will be on the root of the install zip -->
-    <value>\Installation\rocketecommerce_system.xml</value>    
+    <value>\Installation\RE_CartWeightShipping_system.xml</value>    
   </file>
   <!-- The bin path gives the backward folder levels to the DNN bin folder, so assemblies can be taken. -->
 	<!-- In some cases, if the project folder is not under a company level, this will need to be change. -->
