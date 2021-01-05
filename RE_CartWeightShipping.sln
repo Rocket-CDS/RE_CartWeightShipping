@@ -7,6 +7,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RE_CartWeightShipping", "RE
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RocketEcommerce", "..\RocketEcommerce\RocketEcommerce.csproj", "{19735D23-76FD-4AF0-8BE2-9356D32EFEB1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DNNrocketAPI", "..\..\DNNrocket\API\DNNrocketAPI.csproj", "{2200F6C3-7D4B-4CDF-908F-DCA37ADFB121}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Simplisity", "..\..\DNNrocket\Simplisity\Simplisity.csproj", "{933327B5-42D6-4CC3-9C61-32C8ABBCCCEB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,9 +22,14 @@ Global
 		{2D30F254-59AC-41DA-A657-6996C0170616}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2D30F254-59AC-41DA-A657-6996C0170616}.Release|Any CPU.Build.0 = Release|Any CPU
 		{19735D23-76FD-4AF0-8BE2-9356D32EFEB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{19735D23-76FD-4AF0-8BE2-9356D32EFEB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19735D23-76FD-4AF0-8BE2-9356D32EFEB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{19735D23-76FD-4AF0-8BE2-9356D32EFEB1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2200F6C3-7D4B-4CDF-908F-DCA37ADFB121}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2200F6C3-7D4B-4CDF-908F-DCA37ADFB121}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2200F6C3-7D4B-4CDF-908F-DCA37ADFB121}.Release|Any CPU.Build.0 = Release|Any CPU
+		{933327B5-42D6-4CC3-9C61-32C8ABBCCCEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{933327B5-42D6-4CC3-9C61-32C8ABBCCCEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{933327B5-42D6-4CC3-9C61-32C8ABBCCCEB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
