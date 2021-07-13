@@ -12,14 +12,13 @@ namespace RocketEcommerce.RE_CartWeightShipping
     {
         private const string _entityTypeCode = "cartweightship";
         private const string _tableName = "RocketEcommerce";
-        private const string _systemKey = "rocketecommerce";
         private string _guidKey;
         private DNNrocketController _objCtrl;
         public ShipData(string siteGuid)
         {
             var portalid = PortalUtils.GetPortalIdBySiteKey(siteGuid);
             PortalShop = new PortalShopLimpet(portalid, DNNrocketUtils.GetCurrentCulture());
-            _guidKey = siteGuid + "_" + _systemKey + "_" + _entityTypeCode;
+            _guidKey = siteGuid + "_rocketecommerce_" + _entityTypeCode;
             _objCtrl = new DNNrocketController();
             Info = _objCtrl.GetByGuidKey(portalid,-1, _entityTypeCode, _guidKey, "", _tableName);
             if (Info == null)
@@ -34,12 +33,28 @@ namespace RocketEcommerce.RE_CartWeightShipping
         public void Save(SimplisityInfo postInfo)
         {
             Info.XMLData = postInfo.XMLData;
-            Update();
+            ValidateAndUpdate();
             LogUtils.LogTracking("Save - UserId: " + UserUtils.GetCurrentUserId() + " " + postInfo.XMLData, "cartweightship");
         }
-        public void Update()
+        public int ValidateAndUpdate()
         {
-            _objCtrl.Update(Info, _tableName);
+            Validate();
+            return Update();
+        }
+        public void Validate()
+        {
+            var lp = 1;
+            var costList = Info.GetList("range");
+            foreach (var cost in costList)
+            {
+                Info.SetXmlPropertyInt("genxml/range/genxml[" + lp + "]/textbox/cost", PortalShop.CurrencyConvertCents(cost.GetXmlProperty("genxml/textbox/cost")).ToString());
+                lp += 1;
+            }
+        }
+
+        public int Update()
+        {
+            return _objCtrl.Update(Info, _tableName);
         }
         public void Delete()
         {

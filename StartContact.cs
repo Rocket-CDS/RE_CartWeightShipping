@@ -48,7 +48,7 @@ namespace RocketEcommerce.RE_CartWeightShipping
             switch (paramCmd)
             {
                 case "cartweightship_login":
-                    strOut = UserUtils.LoginForm(_systemkey, postInfo, _rocketInterface.InterfaceKey, UserUtils.GetCurrentUserId());
+                    strOut = UserUtils.LoginForm("rocketecommerce", postInfo, _rocketInterface.InterfaceKey, UserUtils.GetCurrentUserId());
                     break;
 
                 case "cartweightship_edit":
