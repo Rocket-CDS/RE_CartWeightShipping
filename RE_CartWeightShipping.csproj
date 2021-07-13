@@ -5,12 +5,17 @@
     <RootNamespace>RocketEcommerce.RE_CartWeightShipping</RootNamespace>
     <AssemblyName>RE_CartWeightShipping</AssemblyName>
     <Configurations>Debug;Release;Razor</Configurations>
+    <AssemblyVersion>1.0.1.0</AssemblyVersion>
   </PropertyGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\DNNrocket\API\DNNrocketAPI.csproj" />
     <ProjectReference Include="..\..\DNNrocket\Simplisity\Simplisity.csproj" />
     <ProjectReference Include="..\RocketEcommerce\RocketEcommerce.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Installation\" />
   </ItemGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">

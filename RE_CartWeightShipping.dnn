@@ -1,7 +1,7 @@
 ﻿<dotnetnuke type="Package" version="5.0">
 	<packages>
     
-		<package name="RE_CartWeightShipping" type="Library" version="1.0.0">
+		<package name="RE_CartWeightShipping" type="Library" version="1.0.1">
 			<friendlyName>RE_CartWeightShipping</friendlyName>
 			<description>RE_CartWeightShipping</description>
       <iconFile></iconFile>
@@ -50,9 +50,10 @@
 
         <component type="File">
           <files>
-            <basePath>DesktopModules\DNNrocket\API\Systems\</basePath>
+            <basePath>DesktopModules\DNNrocketModules\RocketEcommerce\Plugins</basePath>
             <file>
-              <name>RE_CartWeightShipping_system.xml</name>
+              <name>cartweightship.rules</name>
+              <sourceFileName>system.rules</sourceFileName>
             </file>
           </files>
         </component>
