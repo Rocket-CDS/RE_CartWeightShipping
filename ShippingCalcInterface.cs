@@ -9,16 +9,14 @@ namespace RocketEcommerce.RE_CartWeightShipping
 {
     public class ShippingCalcInterface : ShippingInterface
     {
+        private ShipData GetShipData()
+        {
+            var shipData = new ShipData(PortalUtils.SiteGuid());
+            return shipData;
+        }
         public override bool Active()
         {
-            var systemData = new SystemLimpet("rocketecommerce");
-            var rocketInterface = systemData.GetInterface("cartweightship");
-            if (rocketInterface != null)
-            {
-                var shipData = new ShipData(PortalUtils.SiteGuid());
-                return shipData.Active;
-            }
-            return false;
+            return GetShipData().Active;
         }
 
         public override int CalculateShippingCost(CartLimpet cartData)
@@ -56,6 +54,21 @@ namespace RocketEcommerce.RE_CartWeightShipping
                 if (weight >= lowrange && weight < highrange) cost = rangecost;
             }
             return cost;
+        }
+
+        public override string Msg()
+        {
+            return GetShipData().Msg;
+        }
+
+        public override string SelectText()
+        {
+            return GetShipData().SelectText;
+        }
+
+        public override string ShipProvKey()
+        {
+            return GetShipData().InterfaceKey;
         }
 
     }
