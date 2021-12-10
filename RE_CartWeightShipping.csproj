@@ -5,7 +5,9 @@
     <RootNamespace>RocketEcommerce.RE_CartWeightShipping</RootNamespace>
     <AssemblyName>RE_CartWeightShipping</AssemblyName>
     <Configurations>Debug;Release;Razor</Configurations>
-    <AssemblyVersion>1.0.1.0</AssemblyVersion>
+    <AssemblyVersion>1.0.2.0</AssemblyVersion>
+    <FileVersion>1.0.2.0</FileVersion>
+    <Version>1.0.2</Version>
   </PropertyGroup>
 
   <ItemGroup>

@@ -76,8 +76,8 @@ namespace RocketEcommerce.RE_CartWeightShipping
         {
             var payData = new ShipData(PortalUtils.SiteGuid());
             var razorTempl = _appThemeSystem.GetTemplate("settings.cshtml");
-            var strOut = RenderRazorUtils.RazorDetail(razorTempl, payData.Info, _passSettings, new SessionParams(_paramInfo), true);
-            return strOut;
+            var pr = RenderRazorUtils.RazorProcessData(razorTempl, payData.Info, null, _passSettings, new SessionParams(_paramInfo), true);
+            return pr.RenderedText;
         }
         public void SaveData()
         {
