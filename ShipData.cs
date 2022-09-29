@@ -12,22 +12,21 @@ namespace RocketEcommerce.RE_CartWeightShipping
     {
         private const string _entityTypeCode = "cartweightship";
         private const string _tableName = "RocketEcommerce";
+        private const string _systemKey = "rocketecommerce";
         private string _guidKey;
         private DNNrocketController _objCtrl;
-        public ShipData(string siteGuid)
+        public ShipData(int portalid)
         {
-            var portalid = PortalUtils.GetPortalIdBySiteKey(siteGuid);
             PortalShop = new PortalShopLimpet(portalid, DNNrocketUtils.GetCurrentCulture());
-            _guidKey = siteGuid + "_rocketecommerce_" + _entityTypeCode;
+            _guidKey = portalid + "_" + _systemKey + "_" + _entityTypeCode;
             _objCtrl = new DNNrocketController();
             Info = _objCtrl.GetByGuidKey(portalid,-1, _entityTypeCode, _guidKey, "", _tableName);
             if (Info == null)
             {
-                var portalId = PortalUtils.GetPortalIdBySiteKey(siteGuid);
                 Info = new SimplisityInfo();
                 Info.TypeCode = _entityTypeCode;
                 Info.GUIDKey = _guidKey;
-                Info.PortalId = portalId;
+                Info.PortalId = portalid;
             }
         }
         public void Save(SimplisityInfo postInfo)

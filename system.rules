@@ -1,7 +1,8 @@
 ﻿<genxml>
   <systemkey>rocketecommerce</systemkey>
+	<plugin>true</plugin>
 
-  <groupsdata list="true">
+	<groupsdata list="true">
   </groupsdata>
 
   <provtypesdata list="true">
