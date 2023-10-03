@@ -11,13 +11,19 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\DNNrocket\API\DNNrocketAPI.csproj" />
-    <ProjectReference Include="..\..\DNNrocket\Simplisity\Simplisity.csproj" />
-    <ProjectReference Include="..\RocketEcommerce\RocketEcommerce.csproj" />
+    <Folder Include="Installation\" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Installation\" />
+    <Reference Include="DNNrocketAPI">
+      <HintPath>_external\DNNrocketAPI.dll</HintPath>
+    </Reference>
+    <Reference Include="RocketEcommerce">
+      <HintPath>_external\RocketEcommerce.dll</HintPath>
+    </Reference>
+    <Reference Include="Simplisity">
+      <HintPath>_external\Simplisity.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">

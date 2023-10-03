@@ -40,10 +40,6 @@ namespace RocketEcommerce.RE_CartWeightShipping
             var lp = 1;
             foreach (var r in Info.GetList("range"))
             {
-                var amt = PortalShop.CurrencyConvertToCulture(Info.GetXmlPropertyRaw("genxml/range/genxml[" + lp + "]/textbox/lowrange"));
-                Info.SetXmlPropertyInt("genxml/range/genxml[" + lp + "]/textbox/lowrange", PortalShop.CurrencyConvertCents(amt.ToString()).ToString());
-                var amt2 = PortalShop.CurrencyConvertToCulture(Info.GetXmlPropertyRaw("genxml/range/genxml[" + lp + "]/textbox/highrange"));
-                Info.SetXmlPropertyInt("genxml/range/genxml[" + lp + "]/textbox/highrange", PortalShop.CurrencyConvertCents(amt2.ToString()).ToString());
                 var amt3 = PortalShop.CurrencyConvertToCulture(Info.GetXmlPropertyRaw("genxml/range/genxml[" + lp + "]/textbox/cost"));
                 Info.SetXmlPropertyInt("genxml/range/genxml[" + lp + "]/textbox/cost", PortalShop.CurrencyConvertCents(amt3.ToString()).ToString());
                 lp += 1;

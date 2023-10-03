@@ -92,11 +92,11 @@
                 <div class="w3-row w3-display-container w3-card">
                     <div class="w3-col m2 w3-padding">
                         <label class="">@ResourceKey("provider.lowrange")</label>
-                        @TextBoxMoney(productData.PortalId, productData.CultureCode, rangeInfo, "genxml/textbox/lowrange", "  class='w3-input w3-border w3-right-align ' autocomplete='off' ", "0", false, modLP)
+                            @TextBox(rangeInfo, "genxml/textbox/lowrange", "  class='w3-input w3-border w3-right-align ' autocomplete='off' step='1' ", "0", false, modLP,"","number")
                     </div>
                     <div class="w3-col m2 w3-padding">
                         <label class="">@ResourceKey("provider.highrange")</label>
-                        @TextBoxMoney(productData.PortalId, productData.CultureCode, rangeInfo, "genxml/textbox/highrange", "  class='w3-input w3-border w3-right-align ' autocomplete='off' ", "0", false, modLP)
+                            @TextBox(rangeInfo, "genxml/textbox/highrange", "  class='w3-input w3-border w3-right-align ' autocomplete='off' step='1' ", "0", false, modLP,"","number")
                     </div>
                     <div class="w3-col m2 w3-padding">
                         <label class="">@ResourceKey("provider.cost")</label>
