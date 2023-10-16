@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <RootNamespace>RocketEcommerce.RE_CartWeightShipping</RootNamespace>
+    <RootNamespace>RocketEcommerceAPI.RE_CartWeightShipping</RootNamespace>
     <AssemblyName>RE_CartWeightShipping</AssemblyName>
     <Configurations>Debug;Release;Razor</Configurations>
     <AssemblyVersion>1.0.2.0</AssemblyVersion>
@@ -15,15 +15,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="DNNrocketAPI">
-      <HintPath>_external\DNNrocketAPI.dll</HintPath>
-    </Reference>
-    <Reference Include="RocketEcommerce">
-      <HintPath>_external\RocketEcommerce.dll</HintPath>
-    </Reference>
-    <Reference Include="Simplisity">
-      <HintPath>_external\Simplisity.dll</HintPath>
-    </Reference>
+    <ProjectReference Include="..\..\DNNrocket\API\DNNrocketAPI.csproj" />
+    <ProjectReference Include="..\..\DNNrocket\Simplisity\Simplisity.csproj" />
+    <ProjectReference Include="..\RocketEcommerceAPI\RocketEcommerceAPI.csproj" />
   </ItemGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">

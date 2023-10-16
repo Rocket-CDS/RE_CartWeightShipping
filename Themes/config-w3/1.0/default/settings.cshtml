@@ -1,20 +1,20 @@
-@inherits RocketEcommerce.Components.RocketEcommerceTokens<Simplisity.SimplisityRazor>
+@inherits RocketEcommerceAPI.Components.RocketEcommerceAPITokens<Simplisity.SimplisityRazor>
 @using System.Linq
 @using Simplisity;
 @using DNNrocketAPI.Components;
-@using RocketEcommerce.Components;
+@using RocketEcommerceAPI.Components;
 
 @{
     var info = (SimplisityInfo)Model.List.First();
     var datalist = info.GetList("range");
-    var systemData = new SystemLimpet("rocketecommerce");
+    var systemData = new SystemLimpet("rocketecommerceapi");
     var productData = new PortalShopLimpet(info.PortalId, DNNrocketUtils.GetCurrentCulture());
     var interfaceData = systemData.GetInterface("cartweightship");
     var modLP = 1;
 }
 
 @AddProcessData("resourcepath", "/DesktopModules/DNNrocket/API/App_LocalResources/")
-@AddProcessData("resourcepath", "/DesktopModules/DNNrocketModules/RocketEcommerce/App_LocalResources/")
+@AddProcessData("resourcepath", "/DesktopModules/DNNrocketModules/RocketEcommerceAPI/App_LocalResources/")
 @AddProcessData("resourcepath", "/DesktopModules/DNNrocketModules/RE_CartWeightShipping/App_LocalResources/")
 
 

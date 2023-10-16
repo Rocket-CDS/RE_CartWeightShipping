@@ -14,7 +14,7 @@
     </file>
     <file>
       <path>Installation/</path>
-      <name>rocketecommerce_system.xml</name>
+      <name>rocketecommerceapi_system.xml</name>
     </file>
     <file>
       <path>Themes/config-w3/default/</path>

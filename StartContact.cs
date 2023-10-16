@@ -1,13 +1,14 @@
 ﻿using DNNrocketAPI;
 using DNNrocketAPI.Components;
-using RocketEcommerce.Components;
+using DNNrocketAPI.Interfaces;
+using RocketEcommerceAPI.Components;
 using Simplisity;
 using System;
 using System.Collections.Generic;
 
-namespace RocketEcommerce.RE_CartWeightShipping
+namespace RocketEcommerceAPI.RE_CartWeightShipping
 {
-    public class StartConnect : APInterface
+    public class StartConnect : IProcessCommand
     {
         private SimplisityInfo _postInfo;
         private SimplisityInfo _paramInfo;
@@ -18,7 +19,7 @@ namespace RocketEcommerce.RE_CartWeightShipping
         private const string _systemkey = "RE_CartWeightShipping";
         private AppThemeSystemLimpet _appThemeSystem;
 
-        public override Dictionary<string, object> ProcessCommand(string paramCmd, SimplisityInfo systemInfo, SimplisityInfo interfaceInfo, SimplisityInfo postInfo, SimplisityInfo paramInfo, string langRequired = "")
+        public Dictionary<string, object> ProcessCommand(string paramCmd, SimplisityInfo systemInfo, SimplisityInfo interfaceInfo, SimplisityInfo postInfo, SimplisityInfo paramInfo, string langRequired = "")
         {
             var strOut = ""; // return ERROR if not matching commands.
             var rtnDic = new Dictionary<string, object>();
@@ -27,7 +28,7 @@ namespace RocketEcommerce.RE_CartWeightShipping
 
             _systemData = new SystemLimpet(_systemkey);
             _rocketInterface = new RocketInterface(interfaceInfo);
-            _appThemeSystem = new AppThemeSystemLimpet(_systemkey);
+            _appThemeSystem = new AppThemeSystemLimpet(PortalUtils.GetPortalId(), _systemkey);
 
             _postInfo = postInfo;
             _paramInfo = paramInfo;
@@ -48,7 +49,7 @@ namespace RocketEcommerce.RE_CartWeightShipping
             switch (paramCmd)
             {
                 case "cartweightship_login":
-                    strOut = UserUtils.LoginForm("rocketecommerce", postInfo, _rocketInterface.InterfaceKey, UserUtils.GetCurrentUserId());
+                    strOut = UserUtils.LoginForm("rocketecommerceapi", postInfo, _rocketInterface.InterfaceKey, UserUtils.GetCurrentUserId());
                     break;
 
                 case "cartweightship_edit":

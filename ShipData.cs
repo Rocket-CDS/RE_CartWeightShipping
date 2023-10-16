@@ -1,18 +1,18 @@
 ﻿using DNNrocketAPI;
 using DNNrocketAPI.Components;
-using RocketEcommerce.Components;
+using RocketEcommerceAPI.Components;
 using Simplisity;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace RocketEcommerce.RE_CartWeightShipping
+namespace RocketEcommerceAPI.RE_CartWeightShipping
 {
     public class ShipData
     {
         private const string _entityTypeCode = "cartweightship";
-        private const string _tableName = "RocketEcommerce";
-        private const string _systemKey = "rocketecommerce";
+        private const string _tableName = "RocketEcommerceAPI";
+        private const string _systemKey = "rocketecommerceapi";
         private string _guidKey;
         private DNNrocketController _objCtrl;
         public ShipData(int portalid)

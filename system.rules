@@ -1,5 +1,5 @@
 ﻿<genxml>
-  <systemkey>rocketecommerce</systemkey>
+  <systemkey>rocketecommerceapi</systemkey>
 	<plugin>true</plugin>
 
 	<groupsdata list="true">
@@ -12,7 +12,7 @@
     <genxml>
       <textbox>
         <interfacekey>cartweightship</interfacekey>
-        <namespaceclass>RocketEcommerce.RE_CartWeightShipping.ShippingCalcInterface</namespaceclass>
+        <namespaceclass>RocketEcommerceAPI.RE_CartWeightShipping.ShippingCalcInterface</namespaceclass>
         <assembly>RE_CartWeightShipping</assembly>
         <interfaceicon></interfaceicon>
         <defaultcommand></defaultcommand>
@@ -42,7 +42,7 @@
     <genxml>
       <textbox>
         <interfacekey>cartweightship</interfacekey>
-        <namespaceclass>RocketEcommerce.RE_CartWeightShipping.StartConnect</namespaceclass>
+        <namespaceclass>RocketEcommerceAPI.RE_CartWeightShipping.StartConnect</namespaceclass>
         <assembly>RE_CartWeightShipping</assembly>
         <interfaceicon></interfaceicon>
         <defaultcommand>cartweightship_edit</defaultcommand>
