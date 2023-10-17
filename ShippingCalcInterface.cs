@@ -26,7 +26,7 @@ namespace RocketEcommerceAPI.RE_CartWeightShipping
             var l = cartData.CartItemList;
             foreach (var p in l)
             {
-                weight += p.GetSelectedModel().Weight;
+                weight += p.GetSelectedModel().Weight * p.Qty;
             }
             return CalcCost(weight);
         }
@@ -38,28 +38,27 @@ namespace RocketEcommerceAPI.RE_CartWeightShipping
             var l = orderData.GetCartItemList();
             foreach (var p in l)
             {
-                weight += p.GetSelectedModel().Weight;
+                weight += p.GetSelectedModel().Weight * p.Qty;
             }
             return CalcCost(weight);
         }
 
         private int CalcCost(int weight)
         {
-            LogUtils.LogSystem("weight: " + weight);
+            //LogUtils.LogSystem("weight: " + weight);
             var shipData = new ShipData(PortalUtils.GetPortalId());
             var cost = shipData.Info.GetXmlPropertyInt("genxml/textbox/defaultcost");
-            LogUtils.LogSystem("set cost default: " + cost);
+            //LogUtils.LogSystem("set cost default: " + cost);
             var datalist = shipData.Info.GetList("range");
             foreach (var rangeInfo in datalist)
             {
                 var lowrange = rangeInfo.GetXmlPropertyInt("genxml/textbox/lowrange");
                 var highrange = rangeInfo.GetXmlPropertyInt("genxml/textbox/highrange");
                 var rangecost = rangeInfo.GetXmlPropertyInt("genxml/textbox/cost");
-                LogUtils.LogSystem("lowrange: " + lowrange + " highrange: " + highrange + " rangecost: " + rangecost);
                 if (weight >= lowrange && weight < highrange)
                 {
                     cost = rangecost;
-                    LogUtils.LogSystem("set cost: " + cost);
+                    //LogUtils.LogSystem("lowrange: " + lowrange + " highrange: " + highrange + " rangecost: " + rangecost + " setcost: " + cost);
                 }
             }
             return cost;
